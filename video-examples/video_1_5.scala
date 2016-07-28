@@ -83,120 +83,22 @@ def sqrtIter(guess: Double, x: Double): Double =
 >>  x	    2.0
 def sqrtIter(guess: Double, x: Double): Double =
   if(isGoodEnough(guess, x)) guess
+  //if(isGoodEnough(1.5, 2.0)) guess
 
 >>  guess	1.5
 >>  x	    2.0
 def isGoodEnough(guess: Double, x: Double) =
   abs(guess * guess - x) / x < 0.001
+  //abs(1.5 * 1.5 - 2.0) / x < 0.001
 
 >>  x     0.25
 def abs(x: Double) = if(x < 0) -x else x
+  //if(0.25 < 0) -0.25 else 0.25
 
+>>  guess	1.5
+>>  x	    2.0
+def isGoodEnough(guess: Double, x: Double) =
+  abs(guess * guess - x) / x < 0.001
+  //0.25 / 2.0 < 0.001
 
-////////////////////////
-
-
-if(isGoodEnough(guess, x)) guess
-
-else sqrtIter(improve(guess, x), x)       //21
-  guess	1.0
-  x	2.0
-
-(guess + x / guess) / 2                   //17
-  guess	1.0
-  x	2.0
-
-else sqrtIter(improve(guess, x), x)       //21
-  guess	1.0
-  x	2.0
-
-if(isGoodEnough(guess, x)) guess          //20
-  guess	1.5
-  x	2.0
-
-abs(guess * guess - x) / x < 0.001        //14
-  guess	1.5
-  x	2.0
-
-def abs(x: Double) = if(x < 0) -x else x  //11
-  x	0.25
-
-abs(guess * guess - x) / x < 0.001        //14
-  guess	1.5
-  x	2.0
-
-if(isGoodEnough(guess, x)) guess          //20
-  guess	1.5
-  x	2.0
-
-else sqrtIter(improve(guess, x), x)       //21
-  guess	1.5
-  x	2.0
-
-(guess + x / guess) / 2                   //17
-  guess	1.5
-  x	2.0
-
-else sqrtIter(improve(guess, x), x)       //21
-  guess	1.5
-  x	2.0
-
-if(isGoodEnough(guess, x)) guess          //20
-  guess	1.4166666666666665
-  x	2.0
-
-abs(guess * guess - x) / x < 0.001        //14
-  guess	1.4166666666666665
-  x	2.0
-
-def abs(x: Double) = if(x < 0) -x else x  //11
-  x	0.006944444444444198
-
-abs(guess * guess - x) / x < 0.001        //14
-  guess	1.4166666666666665
-  x	2.0
-
-if(isGoodEnough(guess, x)) guess          //20
-  guess	1.4166666666666665
-  x	2.0
-
-else sqrtIter(improve(guess, x), x)       //21
-  guess	1.4166666666666665
-  x	2.0
-
-(guess + x / guess) / 2                   //17
-  guess	1.4166666666666665
-  x	2.0
-
-else sqrtIter(improve(guess, x), x)       //21
-  guess	1.4166666666666665
-  x	2.0
-
-if(isGoodEnough(guess, x)) guess          //20
-  guess	1.4142156862745097
-  x	2.0
-
-abs(guess * guess - x) / x < 0.001        //14
-  guess	1.4142156862745097
-  x	2.0
-
-def abs(x: Double) = if(x < 0) -x else x  //11
-  x	6.007304882427178E-6
-
-abs(guess * guess - x) / x < 0.001        //14
-  guess	1.4142156862745097
-  x	2.0
-
-if(isGoodEnough(guess, x)) guess          //20
-  guess	1.4142156862745097
-  x	2.0
-
-def sqrtIter(guess: Double, x: Double): Double =  //19
-  guess	1.4142156862745097
-  x	2.0
-
-def sqrt(x: Double) = sqrtIter(1.0, x)    //23
-  x	2.0
-
-println(sqrt(2))
-1.4142156862745097
+//cont...
